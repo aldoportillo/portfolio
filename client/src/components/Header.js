@@ -1,14 +1,15 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Header() {
   return (
     <header>
       <h1>Aldo Portillo</h1>
       <nav>
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Blog</a>
-        <a href="#">Contact</a>
+        <Link to="/"><h5>Home</h5></Link>
+        <Link to="/about"><h5>About</h5></Link>
+        <Link to="/blog"><h5>Blog</h5></Link>
+        <Link to="/contact"><h5>Contact</h5></Link>
       </nav>
     </header>
   )
