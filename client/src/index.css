@@ -14,7 +14,11 @@ header{
   padding: 1em;
 }
 
-header > nav > a{
+header > nav{
+  display: flex;
+}
+
+header > nav > a >  h5{
   padding: .8em;
   border: 1px solid white;
   border-radius: 8px;
