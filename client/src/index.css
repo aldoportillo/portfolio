@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;500;600&display=swap');
 
 * {
+  --yellow: #FFFF00;
   background-color: #282836;
   color: white;
   text-decoration: none;
   font-family: 'Source Code Pro', monospace;
 }
-
+/* For components/Header */
 header{
   display: flex;
   align-items: center;
@@ -25,6 +26,9 @@ header > nav > a >  h5{
   margin: .2em;
 }
 
+
+/* For pages/Home */
+
 .main-content{
   display: flex;
   padding-left: 12em;
@@ -40,8 +44,23 @@ header > nav > a >  h5{
 .intro > p {
   padding: 1em;
 }
+
+.intro > p > a {
+  color: var(--yellow);
+}
 .main-image > img{
   height: 500px;
   width: auto;
   padding: 2em;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.social-icons > a > img {
+  height: 100px;
+  width: auto;
+  
 }
