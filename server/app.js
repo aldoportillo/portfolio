@@ -1,8 +1,10 @@
-
 const express = require("express")
-
 const app = express();
 
-console.log("listening on port 5000")
+app.get("/", (req, res) => {
+    res.json({"randomArr": [1,2,3]})
+})
 
-app.listen(5000)
+app.listen(5000, () => {
+    console.log("Server started on port 5000")
+})
