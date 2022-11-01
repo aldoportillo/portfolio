@@ -7,7 +7,7 @@ export default function Home() {
         <div className='intro'>
           <h2>Hello, my name is Aldo Portillo!</h2>
           <p> I am a software developer who specializes in the MERN stack. Aside from coding I enjoy bartending and training in MMA.</p>         
-          <p>Check out <Link to="/projects">my projects</Link>, <Link to="/blogs">my blogs</Link>, and <a href="#">my sparring footage</a>. </p>
+          <p>Check out <Link to="/projects">my projects</Link>, <Link to="/blog">my blogs</Link>, and <a href="#">my sparring footage</a>. </p>
           <div className='stack'>
             <h3>Technologies: </h3> 
             <div className='stack-icons'>
