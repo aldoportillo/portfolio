@@ -7,7 +7,7 @@ export default function Header() {
       <h1>Aldo Portillo</h1>
       <nav>
         <Link to="/"><h5>Home</h5></Link>
-        <Link to="/about"><h5>About</h5></Link>
+        <Link to="/projects"><h5>Projects</h5></Link>
         <Link to="/blog"><h5>Blog</h5></Link>
         <Link to="/contact"><h5>Contact</h5></Link>
       </nav>
