@@ -24,7 +24,7 @@ export default function Home() {
           </div>
         </div>
         <div className='main-image'>
-          <img src={require('./media/redrocks.png')} />
+          <img src={require('../media/redrocks.png')} />
         </div>
       </div>
   )
