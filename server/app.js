@@ -10,6 +10,14 @@ app.get("/api", (req, res) => {
 
 app.post('/contact', (req, res) => {
     const contact = new Contact(req.body)
+
+    contact.save()
+      .then((result) => {
+          res.redirect('/')
+      })
+      .catch((err)=> {
+          console.log(err)
+      })
 })
 
 app.listen(5000, () => {
