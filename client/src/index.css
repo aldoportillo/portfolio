@@ -7,6 +7,10 @@
   text-decoration: none;
   font-family: 'Source Code Pro', monospace;
 }
+
+.root{
+  background-color: #282836;
+}
 /* For components/Header */
 header{
   display: flex;
@@ -79,12 +83,22 @@ header > nav > a >  h5{
   align-items: center;
   border-radius: 10px;
   background-color: #2d2d35;
+  justify-content: center;
 }
 .project-card > img {
   height: 200px;
   width: 200px;
 
 } 
+
+.project-card > p {
+  text-align: center;
+}
+
+.project-card > h4 > a, 
+  .project-card > p {
+    background-color: #2d2d35;
+  }
 
 /* For Contact page */
 
