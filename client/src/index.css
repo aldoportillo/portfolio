@@ -75,6 +75,8 @@ header > nav > a >  h5{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2em;
+  padding-left: 12em;
+  padding-right: 12em;
 }
 
 .project-card {
