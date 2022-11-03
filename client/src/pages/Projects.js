@@ -1,14 +1,19 @@
 import React from 'react'
 import Project from '../components/Project'
+import {projectData} from '../data/projectData'
 
 export default function Projects(props) {
 
   //I will map through projects data to return Project component cards
+
+  const renderProjects = projectData.map(project => {
+    return (
+      <Project name={project.title} img={project.img} key={project.key}/>
+    )
+  })
   return (
     <div className='projects-page'>
-      <Project name="BJJ Score Tracker" img={require('../media/projects/bjj-score.png')} />
-      <Project name="Rock, Paper, Scissors" img={require('../media/projects/rockpaperscissors.png')} />
-      <Project name="Tenzies" img={require('../media/projects/tenzies.png')} />
+      {renderProjects}
     </div>
   )
 }
