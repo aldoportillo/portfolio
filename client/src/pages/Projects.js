@@ -8,7 +8,7 @@ export default function Projects(props) {
 
   const renderProjects = projectData.map(project => {
     return (
-      <Project name={project.title} img={project.img} key={project.key}/>
+      <Project name={project.title} img={project.img} key={project.key} link={project.link} bio={project.bio}/>
     )
   })
   return (
