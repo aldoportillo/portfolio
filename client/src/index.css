@@ -104,8 +104,62 @@ header > nav > a >  h5{
 
 /* For Contact page */
 
+.contact-page {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid white;
+  margin: 30px;
+  margin-left: 30vw;
+  margin-right: 30vw;
+  background-color: #2d2d35;
+}
+
+.contact-page > form, 
+   .contact-page > h3,
+      .contact-page > form > label {
+        background-color: #2d2d35;
+      }
+
 .contact-page > form{
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 2em;
+
 }
+.contact-page > form > input {
+  background-color: #2d2d3573;
+  height: 1.7em;
+
+}
+
+.contact-page > form > input:focus{
+  outline: none
+  
+
+}
+
+.button {
+  position: relative;
+  display: block;
+  width: 200px;
+  height: 36px;
+  border-radius: 18px;
+  background-color: #1c89ff;
+  border: solid 1px transparent;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 300;
+  cursor: pointer;
+  transition: all .1s ease-in-out;
+  margin-bottom: 1.2em;
+}
+.button:hover {
+  background-color: transparent;
+  border-color: #fff;
+  transition: all .1s ease-in-out;
+}
+  
+
