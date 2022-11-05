@@ -1,5 +1,8 @@
 import React from 'react'
 import BlogList from '../components/BlogList'
+import { nanoid } from 'nanoid'
+
+
 
 export default function Blog() {
 
@@ -18,7 +21,7 @@ export default function Blog() {
 
      const renderBlogs = backendData.map( blog => {
         return(
-            <BlogList title={blog.title}/>
+            <BlogList key={nanoid()} title={blog.title}/>
         )
      })
 
