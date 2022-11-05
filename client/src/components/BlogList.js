@@ -1,15 +1,10 @@
 import React from 'react'
-import {Routes, Route, Link} from 'react-router-dom'
-import BlogEntry from './BlogEntry'
+import {Link} from 'react-router-dom'
 
 export default function BlogList({title, src}) {
   return (
     <div className='blog-list'>
-        <Routes>
-            <Route path={`/${title}`} element={<BlogEntry title={title} />} />
-        </Routes>
-        
-        <Link to={`/${title}`}>{title}</Link>
+        <Link to={`/blog/${title}`}>{title}</Link>
     </div>
   )
 }

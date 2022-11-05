@@ -4,10 +4,9 @@ import { nanoid } from 'nanoid'
 import { blogData } from '../data/blogData'
 
 
-
 export default function Blog() {
 
-    const [backendData, setBackendData] = React.useState([{title: 'blog1'}, {title: 'blog2'}, {title: 'blog3'}])
+    const [backendData, setBackendData] = React.useState(blogData)
 
     console.log(backendData)
 
@@ -18,14 +17,11 @@ export default function Blog() {
    
     // }, [])
 
-    console.log(backendData)
-
-     const renderBlogs = backendData.map( blog => {
+    const renderBlogs = backendData.map( blog => {
         return(
-            <BlogList key={nanoid()} title={blog.title}/>
+            <BlogList key={nanoid()} title={blog.title} />
         )
-     })
-
+    })
   return (
     <>
     <div>Blog</div>
