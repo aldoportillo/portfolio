@@ -1,6 +1,7 @@
 import React from 'react'
 import BlogList from '../components/BlogList'
 import { nanoid } from 'nanoid'
+import { blogData } from '../data/blogData'
 
 
 
