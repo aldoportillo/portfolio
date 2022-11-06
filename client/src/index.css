@@ -102,6 +102,14 @@ header > nav > a >  h5{
     background-color: #2d2d35;
   }
 
+/* For Blog Page */
+
+.blog-page{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 /* For Contact page */
 
 .contact-page {

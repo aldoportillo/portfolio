@@ -23,8 +23,8 @@ export default function Blog() {
         )
     })
   return (
-    <>
-    <div>Blog</div>
+    <div className='blog-page'>
+    <h2>Blogs</h2>
 
     {renderBlogs}
      {/* {(typeof backendData.randomArr === 'undefined') ? (
@@ -33,6 +33,6 @@ export default function Blog() {
         // <p>{backendData.randomArr}</p>
         {renderBlogs}
     )}  */}
-    </>
+    </div>
   )
 }
