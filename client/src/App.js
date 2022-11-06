@@ -8,6 +8,9 @@ import Projects from './pages/Projects';
 import Blog from './pages/Blog';
 import Contact from './pages/Contact';
 
+import { blogData } from './data/blogData';
+import BlogEntry from './components/BlogEntry';
+
 function App() {
   return (
     <div className="App">
@@ -15,8 +18,12 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/projects" element={<Projects />} />
-        <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/*" element={<Blog />} />
         <Route path="/contact" element={<Contact />} />
+
+        {blogData.map(m => {
+          return (<Route path={`/blog/${m.title}`} exact element={<BlogEntry title={m.title} content={m.content}/> } />)
+        } )}
       </Routes>
       <Footer />
     </div>
