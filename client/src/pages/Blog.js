@@ -5,12 +5,10 @@ import { nanoid } from 'nanoid'
 
 export default function Blog({blogData}) {
 
-    const [backendData, setBackendData] = React.useState(blogData)
 
-
-    const renderBlogs = backendData.map( blog => {
+    const renderBlogs = blogData.map( blog => {
         return(
-            <BlogList key={nanoid()} title={blog.title} />
+            <BlogList key={nanoid()} title={blog.title} date={blog.date} />
         )
     })
   return (
@@ -18,10 +16,10 @@ export default function Blog({blogData}) {
     <h2>Blogs</h2>
 
     {renderBlogs}
-     {/* {(typeof backendData.randomArr === 'undefined') ? (
+     {/* {(typeof blogData.randomArr === 'undefined') ? (
         <p>Loading...</p>
     ): (
-        // <p>{backendData.randomArr}</p>
+        // <p>{blogData.randomArr}</p>
         {renderBlogs}
     )}  */}
     </div>
