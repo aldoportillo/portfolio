@@ -10,6 +10,7 @@ import Contact from './pages/Contact';
 
 import { blogData } from './data/blogData';
 import BlogEntry from './components/BlogEntry';
+import { nanoid } from 'nanoid';
 
 function App() {
 
@@ -30,7 +31,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
 
         {blogData.map(m => {
-          return (<Route path={`/blog/${m.title}`} exact element={<BlogEntry title={m.title} content={m.content}/> } />)
+          return (<Route key={nanoid()} path={`/blog/${m.title}`} exact element={<BlogEntry title={m.title} content={m.content}/> } />)
         } )}
       </Routes>
       <Footer />
