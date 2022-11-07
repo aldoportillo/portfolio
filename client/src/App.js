@@ -8,17 +8,19 @@ import Projects from './pages/Projects';
 import Blog from './pages/Blog';
 import Contact from './pages/Contact';
 
-import { blogData } from './data/blogData';
+import { blogDataAPI } from './data/blogData';
 import BlogEntry from './components/BlogEntry';
 import { nanoid } from 'nanoid';
 
 function App() {
 
 
+  const [blogData, setBlogData] = React.useState(blogDataAPI) //This will soon be from the API and just called blogData
+
     // React.useEffect(()=> {
-    //     fetch('/api')
+    //     fetch('/blogs')
     //     .then(res => res.json())
-    //     .then(data => setBackendData(data)) 
+    //     .then(data => setBlogData(data)) 
    
     // }, [])
   return (
@@ -30,8 +32,8 @@ function App() {
         <Route path="/blog/*" element={<Blog blogData={blogData}/>} />
         <Route path="/contact" element={<Contact />} />
 
-        {blogData.map(m => {
-          return (<Route key={nanoid()} path={`/blog/${m.title}`} exact element={<BlogEntry title={m.title} content={m.content}/> } />) //This will create the Blog entry pages
+        {blogData.map(blog => {
+          return (<Route key={nanoid()} path={`/blog/${blog.title}`} exact element={<BlogEntry title={blog.title} content={blog.content} imgArr={blog.images}/> } />) //This will create the Blog entry pages
         } )}
       </Routes>
       <Footer />
