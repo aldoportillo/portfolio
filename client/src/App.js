@@ -12,13 +12,21 @@ import { blogData } from './data/blogData';
 import BlogEntry from './components/BlogEntry';
 
 function App() {
+
+
+    // React.useEffect(()=> {
+    //     fetch('/api')
+    //     .then(res => res.json())
+    //     .then(data => setBackendData(data)) 
+   
+    // }, [])
   return (
     <div className="App">
       <Header />
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/projects" element={<Projects />} />
-        <Route path="/blog/*" element={<Blog />} />
+        <Route path="/blog/*" element={<Blog blogData={blogData}/>} />
         <Route path="/contact" element={<Contact />} />
 
         {blogData.map(m => {
