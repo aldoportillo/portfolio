@@ -1,4 +1,4 @@
-export const blogData = [
+export const blogDataAPI = [
     {
         title: 'Colorado',
         date: 'March 2019',
