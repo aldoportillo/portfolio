@@ -31,7 +31,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
 
         {blogData.map(m => {
-          return (<Route key={nanoid()} path={`/blog/${m.title}`} exact element={<BlogEntry title={m.title} content={m.content}/> } />)
+          return (<Route key={nanoid()} path={`/blog/${m.title}`} exact element={<BlogEntry title={m.title} content={m.content}/> } />) //This will create the Blog entry pages
         } )}
       </Routes>
       <Footer />
