@@ -1,12 +1,15 @@
 const express = require("express")
+const mongoose = require("mongoose")
 const app = express();
 
 
 const Contact = require('./models/contact')
 
-app.get("/api", (req, res) => {
-    res.json({"randomArr": [1,2,3]})
+app.get("/blogs", (req, res) => {
+    //res.json({"randomArr": [[1,2,3], [4,5,6], [7,8,9]]})
+    res.json({"randomArr": [{title: 'blog1'}, {title: 'blog2'}, {title: 'blog3'}]})
 })
+
 
 app.post('/contact', (req, res) => {
     const contact = new Contact(req.body)
