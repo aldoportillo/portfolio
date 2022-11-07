@@ -127,6 +127,24 @@ header > nav > a >  h5{
  .blog-list > a > p {
   background-color: #2d2d35;
  }
+
+ /*For BlogEntry */
+
+ .blog-entry{
+    max-width: 60vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 12em;
+    padding-right: 12em;
+    gap: 2em;
+ }
+
+ .blog-entry > img {
+  max-width: 60vw;
+  height: auto;
+ }
 /* For Contact page */
 
 .contact-page {
