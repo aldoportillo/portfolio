@@ -5,7 +5,7 @@ export default function BlogEntry({title, content }) {
 
   const renderContent = content.map( type => {
     if( type.includes('jpeg')){
-      return <img src={type} />
+      return <img src={type} alt=""/>
     } else if (typeof(type) === 'string') {
       return <p>{type}</p>
       
@@ -14,7 +14,7 @@ export default function BlogEntry({title, content }) {
   return (
     <div className='blog-entry'>
         <h3>{title}</h3>
-        <div>{renderContent}</div>
+        {renderContent}
         <Link to="/blog"><button>Back to blogs page</button></Link>
     </div>
 
