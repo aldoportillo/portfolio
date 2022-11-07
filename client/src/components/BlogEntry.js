@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 export default function BlogEntry({title, content }) {
 
   const renderContent = content.map( type => {
-    if( type.includes('jpeg')){
+    if( type.includes('jpeg' ) || type.includes('JPG' ) || type.includes('PNG' ) ){
       return <img src={type} alt=""/>
     } else if (typeof(type) === 'string') {
       return <p>{type}</p>
