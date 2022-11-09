@@ -25,8 +25,6 @@ app.use(cors())
 
 app.use(portfolioRoutes)
 
-//app.use(portfolioRoutes)
-
 app.get("/", (req, res) => {
     res.send("<h1>Welcome Aldo Portillo's Portfolio Server</h1> <p>Please Leave</p>")
 })
