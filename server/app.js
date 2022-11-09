@@ -1,31 +1,29 @@
+const dotenv = require("dotenv").config()
 const express = require("express")
 const mongoose = require("mongoose")
-const app = express();
+const cors = require("cors")
 
+const app = express()
 
-const Contact = require('./models/contact')
+const PORT = process.env.PORT || 5000;
 
-app.get("/blogs", (req, res) => {
-    //res.json({"randomArr": [[1,2,3], [4,5,6], [7,8,9]]})
-    res.json({"blogs": [{title: 'blog1'}, {title: 'blog2'}, {title: 'blog3'}]})
-})
+mongoose
+    .connect(process.env.MONGO_URI)
+    .then(() => {
+        app.listen(PORT, () => {
+            console.log(`Listening on Port ${PORT}`)
+        })
+    })
+    .catch((err) => console.log(err))
 
-app.get("/projects", (req, res) => {
-    res.json({"projects": [{title: 'project1'}, {title: 'project2'}, {title: 'project3'}]})
-})
+app.use(express.json());
 
-app.post('/contact', (req, res) => {
-    const contact = new Contact(req.body)
+app.use(express.urlencoded({extended: false}))
 
-    contact.save()
-      .then((result) => {
-          res.redirect('/')
-      })
-      .catch((err)=> {
-          console.log(err)
-      })
-})
+app.use(cors())
 
-app.listen(5000, () => {
-    console.log("Server started on port 5000")
+//app.use(portfolioRoutes)
+
+app.get("/", (req, res) => {
+    res.send("Homepage")
 })
