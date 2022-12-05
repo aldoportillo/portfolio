@@ -7,7 +7,7 @@ export default function Home() {
         <div className='intro'>
           <h2>Hello, my name is Aldo Portillo!</h2>
           <p> I am a software developer who specializes in the MERN stack. Aside from coding I enjoy bartending and training in MMA.</p>         
-          <p>Check out <Link to="/projects">my projects</Link>, <Link to="/blog">my blogs</Link>, and <a href="https://www.youtube.com/@portillomma">my sparring footage</a>. </p>
+          <p>Check out <Link to="/projects">my projects</Link>, <Link to="/blog">my blogs</Link>, and <a href="https://www.youtube.com/@portillomma" target={"_blank"} rel="noreferrer">my sparring footage</a>. </p>
           <div className='stack'>
             <h3>Technologies: </h3> 
             <div className='stack-icons'>
@@ -26,10 +26,10 @@ export default function Home() {
           <div className='socials'>
             <h3>Socials: </h3>
             <div className='social-icons'>
-                <a href={'https://www.linkedin.com/in/aldo-portillo-09b187253/'} target={"_blank"}><img src={require('../media/linkedin-icon.png')} alt="" /></a>
-                <a href={'https://github.com/aldoportillo'} target={"_blank"}><img src={require('../media/github-icon.png')} alt="" /></a>
-                <a href={'https://www.instagram.com/portillo.mma/'} target={"_blank"}><img src={require('../media/insta-icon.png')} alt=""/></a>
-                <a href={'https://twitter.com/aldoportillodev'} target={"_blank"}><img src={require('../media/twitter-icon.png')} alt=""/></a>
+                <a href={'https://www.linkedin.com/in/aldo-portillo-09b187253/'} target={"_blank"} rel="noreferrer"><img src={require('../media/linkedin-icon.png')} alt="" /></a>
+                <a href={'https://github.com/aldoportillo'} target={"_blank"} rel="noreferrer"><img src={require('../media/github-icon.png')} alt="" /></a>
+                <a href={'https://www.instagram.com/portillo.mma/'} target={"_blank"} rel="noreferrer"><img src={require('../media/insta-icon.png')} alt=""/></a>
+                <a href={'https://twitter.com/aldoportillodev'} target={"_blank"} rel="noreferrer"><img src={require('../media/twitter-icon.png')} alt=""/></a>
             </div>
           </div>
         </div>
