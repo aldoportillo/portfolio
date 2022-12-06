@@ -19,6 +19,7 @@ header{
   align-items: center;
   justify-content: space-between;
   padding: 1em;
+  position: sticky;
 }
 
 
@@ -177,10 +178,12 @@ height: auto;
 
 /* For Footer */
 footer {
-  position: fixed;
+  position:relative;
   left: 0;
   bottom: 0;
   width: 100%;
   color: white;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
