@@ -1,6 +1,4 @@
 import React from 'react';
-import Header from './components/Header';
-import Footer from './components/Footer';
 
 import {Routes, Route} from 'react-router-dom'
 import Home from './pages/Home';
@@ -11,6 +9,7 @@ import Contact from './pages/Contact';
 import { blogDataAPI } from './data/blogData';
 import BlogEntry from './components/BlogEntry';
 import { nanoid } from 'nanoid';
+import PageContainer from './components/PageContainer';
 
 function App() {
 
@@ -25,9 +24,9 @@ function App() {
     // }, [])
   return (
     <div className="App">
-      <Header />
       <Routes>
-        <Route exact path="/" element={<Home />} />
+        <Route exact path="/" element={<PageContainer children={<Home />}/>} />
+        {/* <Route exact path="/" element={<Home />} /> */}
         <Route path="/projects" element={<Projects />} />
         <Route path="/blog/*" element={<Blog blogData={blogData}/>} />
         <Route path="/contact" element={<Contact />} />
@@ -36,7 +35,6 @@ function App() {
           return (<Route key={nanoid()} path={`/blog/${blog.title}`} exact element={<BlogEntry title={blog.title} content={blog.content} imgArr={blog.images}/> } />) //This will create the Blog entry pages
         } )}
       </Routes>
-      <Footer />
     </div>
   );
 }
