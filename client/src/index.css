@@ -100,5 +100,33 @@ header > nav > a >  h5{
 .project-card > h4 > a, 
   .project-card > p {
     background-color: #2d2d35;
-  }
+}
+
+/* For Blog Page */
+
+.blog-page{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1vh;
+}
+
+.blog-list > a {
+  display: flex;
+  gap: 20vw;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid white;
+  border-radius: 15px;
+  padding-left: 5px;
+  padding-right: 5px;
+  background-color: #2d2d35;
+  width: 90vw;
+}
+
+.blog-list > a > h3,
+ .blog-list > a > p {
+  background-color: #2d2d35;
+ }
 
