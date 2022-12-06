@@ -58,3 +58,35 @@ header > nav {
   max-width: 20vw;
 }
 
+/* FOR PROJECTS */
+/* .projects-page{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2em;
+  padding-left: 12em;
+  padding-right: 12em;
+} */
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  background-color: #2d2d35;
+  justify-content: center;
+}
+.project-card > img {
+  height: 200px;
+  width: 200px;
+
+} 
+
+.project-card > p {
+  text-align: center;
+}
+
+.project-card > h4 > a, 
+  .project-card > p {
+    background-color: #2d2d35;
+  }
+
