@@ -26,10 +26,9 @@ function App() {
     <div className="App">
       <Routes>
         <Route exact path="/" element={<PageContainer children={<Home />}/>} />
-        {/* <Route exact path="/" element={<Home />} /> */}
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/blog/*" element={<Blog blogData={blogData}/>} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/projects" element={<PageContainer children={<Projects />} />} />
+        <Route path="/blog/*" element={<PageContainer children={<Blog blogData={blogData}/>} />}/>
+        <Route path="/contact" element={<PageContainer children={<Contact />} />} />
 
         {blogData.map(blog => {
           return (<Route key={nanoid()} path={`/blog/${blog.title}`} exact element={<BlogEntry title={blog.title} content={blog.content} imgArr={blog.images}/> } />) //This will create the Blog entry pages
