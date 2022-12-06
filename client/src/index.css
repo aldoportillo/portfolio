@@ -56,7 +56,11 @@ header > nav > a >  h5{
 }
 
 .stack > .stack-icons {
-  align-self: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  
 }
 
 .social-icons{
