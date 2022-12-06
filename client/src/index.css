@@ -13,16 +13,28 @@
   flex-direction: column;
 }
 
-/*Home Page Styling */
+/* For components/Header */
 header{
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 1em;
 }
 
-header > nav {
+
+header > nav{
   display: flex;
 }
+
+header > nav > a >  h5{
+  padding: .8em;
+  border: 1px solid white;
+  border-radius: 8px;
+  margin: .2em;
+}
+
+
+/*Home Page Styling */
 
 .main-content{
   display: flex;
