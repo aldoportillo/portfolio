@@ -5,9 +5,15 @@ export default function Home() {
   return (
     <div className='main-content'>
         <div className='intro'>
-          <h2>Hello, my name is Aldo Portillo!</h2>
-          <p> I am a software developer who specializes in the MERN stack. Aside from coding I enjoy bartending and training in MMA.</p>         
-          <p>Check out <Link to="/projects">my projects</Link>, <Link to="/blog">my blogs</Link>, and <a href="https://www.youtube.com/@portillomma" target={"_blank"} rel="noreferrer">my sparring footage</a>. </p>
+            <div className='intro-text'>
+              <h2>Hello, my name is Aldo Portillo!</h2>
+              <p> I am a software developer who specializes in the MERN stack. Aside from coding I enjoy bartending and training in MMA.</p>         
+              <p>Check out <Link to="/projects">my projects</Link>, <Link to="/blog">my blogs</Link>, and <a href="https://www.youtube.com/@portillomma" target={"_blank"} rel="noreferrer">my sparring footage</a>. </p>
+            </div>
+            <div className='intro-image'>
+              <img src={require('../media/redrocks.png')}  alt=""/>
+            </div>
+          </div>
           <div className='stack'>
             <h3>Technologies: </h3> 
             <div className='stack-icons'>
@@ -32,10 +38,7 @@ export default function Home() {
                 <a href={'https://twitter.com/aldoportillodev'} target={"_blank"} rel="noreferrer"><img src={require('../media/twitter-icon.png')} alt=""/></a>
             </div>
           </div>
-        </div>
-        <div className='main-image'>
-          <img src={require('../media/redrocks.png')}  alt=""/>
-        </div>
+        
       </div>
   )
 }
