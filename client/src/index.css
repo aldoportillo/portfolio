@@ -170,3 +170,13 @@ height: auto;
   flex-direction: column;
   gap: 10px;
 }
+
+/* For Footer */
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+}
