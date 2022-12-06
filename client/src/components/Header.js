@@ -1,7 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { Sling as Hamburger } from 'hamburger-react'
 
 export default function Header() {
+
+  const [isOpen, setIsOpen] = React.useState(false)
+  
   return (
     <header>
       <h1>Aldo Portillo</h1>
