@@ -7,11 +7,25 @@
   text-decoration: none;
   font-family: 'Source Code Pro', monospace;
 }
-
 .container{
   display: flex;
   flex-direction: column;
 }
+
+/*For Sidebar */
+
+.main{
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.side-bar{
+  transition-timing-function: ease-in;
+  transition: 0.2s;
+  width: 50vw;
+  position:sticky;
+}
+
 
 /* For components/Header */
 header{
@@ -187,3 +201,6 @@ footer {
   align-items: center;
   justify-content: space-between;
 }
+
+/*Attempt new nav bar*/
+
