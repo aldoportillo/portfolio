@@ -226,6 +226,41 @@ footer {
     margin: .2em;
   }
 
+  /*For Home Page */
+
+  .main-content{
+    display: grid;
+    padding-left: 6em;
+    padding-right: 6em;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .intro{
+    grid-column: 1/3;
+  }
+
+  .intro-text > h2{
+    font-size: 3rem;
+  }
+
+  .intro-text > p{
+    font-size: 1.5rem;
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .social-icons > a > img {
+    height: 100px;
+    width: auto;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+  
+
   /* For Projects */
 
   .projects-page{
@@ -288,6 +323,7 @@ footer {
   }
 
   /*For BlogEntry */
+
 
   .blog-entry{
       max-width: 60vw;
