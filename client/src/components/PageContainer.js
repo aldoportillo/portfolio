@@ -19,7 +19,7 @@ export default function PageContainer({children}) {
         <Header isOpen={isOpen} setIsOpen={setIsOpen} toggleMenu={toggleMenu}/>
         <div className='main'>
           {children}
-          {isOpen && <SideBar />}
+          {isOpen && <SideBar isOpen={isOpen} setIsOpen={setIsOpen}/>}
         </div>
         <Footer />
     </div>
