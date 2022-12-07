@@ -204,3 +204,175 @@ footer {
 
 /*Attempt new nav bar*/
 
+/*Attempt using media queries*/
+
+@media (min-width:1281px){
+  /* For components/Header */
+  header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;
+  }
+
+  header > nav{
+    display: flex;
+  }
+
+  header > nav > a >  h5{
+    padding: .8em;
+    border: 1px solid white;
+    border-radius: 8px;
+    margin: .2em;
+  }
+
+  /* For Projects */
+
+  .projects-page{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
+    padding-left: 12em;
+    padding-right: 12em;
+  }
+
+  .project-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #2d2d35;
+    justify-content: center;
+  }
+  .project-card > img {
+    height: 200px;
+    width: 200px;
+
+  } 
+
+  .project-card > p {
+    text-align: center;
+  }
+
+  .project-card > h4 > a, 
+    .project-card > p {
+      background-color: #2d2d35;
+    }
+
+  /* For Blog Page */
+
+  .blog-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1vh;
+  }
+
+  .blog-list > a {
+    display: flex;
+    gap: 20vw;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid white;
+    border-radius: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: #2d2d35;
+    width: 60vw;
+  }
+
+  .blog-list > a > h3,
+  .blog-list > a > p {
+    background-color: #2d2d35;
+  }
+
+  /*For BlogEntry */
+
+  .blog-entry{
+      max-width: 60vw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding-left: 12em;
+      padding-right: 12em;
+      gap: 2em;
+  }
+
+  .blog-entry > img {
+    max-width: 60vw;
+    height: auto;
+  }
+  /* For Contact page */
+
+  .contact-page {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid white;
+    margin: 30px;
+    margin-left: 30vw;
+    margin-right: 30vw;
+    background-color: #2d2d35;
+  }
+
+  .contact-page > form, 
+    .contact-page > h3,
+        .contact-page > form > label {
+          background-color: #2d2d35;
+        }
+
+  .contact-page > form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+
+  }
+  .contact-page > form > input {
+    background-color: #2d2d3573;
+    height: 1.7em;
+
+  }
+
+  .contact-page > form > input:focus{
+    outline: none
+    
+
+  }
+
+  .button {
+    position: relative;
+    display: block;
+    width: 200px;
+    height: 36px;
+    border-radius: 18px;
+    background-color: #1c89ff;
+    border: solid 1px transparent;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 300;
+    cursor: pointer;
+    transition: all .1s ease-in-out;
+    margin-bottom: 1.2em;
+  }
+  .button:hover {
+    background-color: transparent;
+    border-color: #fff;
+    transition: all .1s ease-in-out;
+  }
+    
+
+  /* Style footer */
+
+  footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+  }
+  }
