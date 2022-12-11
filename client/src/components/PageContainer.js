@@ -1,7 +1,7 @@
 import React from 'react'
 import Footer from './Footer'
 import Header from './Header'
-import SideBar from './SideBar'
+import { useLocation } from 'react-router-dom'
 
 
 
@@ -17,9 +17,7 @@ export default function PageContainer({children}) {
 
   const [windowSize, setWindowSize] = React.useState(getWindowSize())
 
-  function toggleMenu() {
-
-  }
+  const location  = useLocation()
 
   React.useEffect(() => {
     function handleResize() {
@@ -33,9 +31,12 @@ export default function PageContainer({children}) {
     }
   }, [])
 
+  React.useEffect(()  => {
+    setIsOpen(false)
+  }, [location])
   return (
     <div className="container">
-        <Header isOpen={isOpen} setIsOpen={setIsOpen} toggleMenu={toggleMenu} windowSize={windowSize}/>
+        <Header isOpen={isOpen} setIsOpen={setIsOpen} windowSize={windowSize}/>
         <div className='main'>
           {children}
         </div>
