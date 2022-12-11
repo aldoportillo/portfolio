@@ -19,6 +19,7 @@
 
 
 /* For components/Header */
+
 .h-nav{
   width: 100vw;
   display: flex;
@@ -57,7 +58,7 @@
   width: 30vw;
 }
 
-.intro > .intro-text > p > a {
+.section-1-text > p > a {
   color: var(--yellow);
 }
 
@@ -68,6 +69,36 @@
 .social-icons > a >img {
   width: 20vw;
 }
+@media (min-width:1281px){
+
+  .section-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .intro-image{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .intro-image > img{
+    display: block;
+    width: 20vw;
+  }
+  .stack-icons{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .section-2{
+    width: 80vw;;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
 
 /* FOR PROJECTS */
 /* .projects-page{
