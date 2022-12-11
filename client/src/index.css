@@ -51,18 +51,9 @@
 
 /*Home Page Styling */
 
-.main-content{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
 
-.intro {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
 .intro-image > img{
+  display: none;
   width: 30vw;
 }
 
@@ -70,23 +61,12 @@
   color: var(--yellow);
 }
 
-.stack > .stack-icons {
+.social-icons {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  
+  justify-content: space-between;
 }
-
-.social-icons{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 10px;
-}
-
 .social-icons > a >img {
-  max-width: 20vw;
+  width: 20vw;
 }
 
 /* FOR PROJECTS */
