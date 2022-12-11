@@ -12,41 +12,27 @@
   flex-direction: column;
 }
 
-/*For Sidebar */
-
-.main{
-  display: flex;
-  flex-direction: column-reverse;
-}
-
-.side-bar{
-  transition-timing-function: ease-in;
-  transition: 0.2s;
-  width: 50vw;
-  position:sticky;
-}
-
 
 /* For components/Header */
-header{
+.h-nav{
+  width: 100vw;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 1em;
-  position: sticky;
+  
 }
 
-
-header > nav{
+.h-nav > .side-bar > nav{
   display: flex;
+  gap: 1rem;
 }
 
-header > nav > a >  h5{
-  padding: .8em;
-  border: 1px solid white;
-  border-radius: 8px;
-  margin: .2em;
+.v-nav > .side-bar > nav{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
+
+
 
 
 /*Home Page Styling */
