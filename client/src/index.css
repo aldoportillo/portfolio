@@ -188,18 +188,7 @@ max-width: 80vw;
 height: auto;
 } 
 
-/*For Contact Page */
-.contact-page{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 
-.contact-page > form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
 
 /* For Footer */
 footer {
@@ -217,143 +206,23 @@ footer {
 
 /*Attempt using media queries*/
 
-@media (min-width:1281px){
-  /* For components/Header */
-  header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1em;
-  }
-
-  header > nav{
-    display: flex;
-  }
-
-  header > nav > a >  h5{
-    padding: .8em;
-    border: 1px solid white;
-    border-radius: 8px;
-    margin: .2em;
-  }
-
-  /*For Home Page */
-
-  .main-content{
-    display: grid;
-    padding-left: 6em;
-    padding-right: 6em;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-  }
-
-  .intro{
-    grid-column: 1/3;
-  }
-
-  .intro-text > h2{
-    font-size: 3rem;
-  }
-
-  .intro-text > p{
-    font-size: 1.5rem;
-  }
-
-  .social-icons {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .social-icons > a > img {
-    height: 100px;
-    width: auto;
-    padding-left: 1em;
-    padding-right: 1em;
-  }
-  
-
-  /* For Projects */
-
-  .projects-page{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2em;
-    padding-left: 12em;
-    padding-right: 12em;
-  }
-
-  .project-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 10px;
-    background-color: #2d2d35;
-    justify-content: center;
-  }
-  .project-card > img {
-    height: 200px;
-    width: 200px;
-
-  } 
-
-  .project-card > p {
-    text-align: center;
-  }
-
-  .project-card > h4 > a, 
-    .project-card > p {
-      background-color: #2d2d35;
-    }
-
-  /* For Blog Page */
-
-  .blog-page{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1vh;
-  }
-
-  .blog-list > a {
-    display: flex;
-    gap: 20vw;
-    align-items: center;
-    justify-content: space-between;
-    border: 1px solid white;
-    border-radius: 15px;
-    padding-left: 5px;
-    padding-right: 5px;
-    background-color: #2d2d35;
-    width: 60vw;
-  }
-
-  .blog-list > a > h3,
-  .blog-list > a > p {
-    background-color: #2d2d35;
-  }
-
   /*For BlogEntry */
 
 
-  .blog-entry{
-      max-width: 60vw;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding-left: 12em;
-      padding-right: 12em;
-      gap: 2em;
-  }
 
-  .blog-entry > img {
-    max-width: 60vw;
-    height: auto;
-  }
-  /* For Contact page */
+/* For Contact page */
 
-  .contact-page {
+.contact-page > *{
+  background-color: #2d2d35;
+
+}
+
+.contact-page > form{
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width:1025px){
+  /* .contact-page {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -388,27 +257,5 @@ footer {
     outline: none
     
 
-  }
-
-  .button {
-    position: relative;
-    display: block;
-    width: 200px;
-    height: 36px;
-    border-radius: 18px;
-    background-color: #1c89ff;
-    border: solid 1px transparent;
-    color: #fff;
-    font-size: 18px;
-    font-weight: 300;
-    cursor: pointer;
-    transition: all .1s ease-in-out;
-    margin-bottom: 1.2em;
-  }
-  .button:hover {
-    background-color: transparent;
-    border-color: #fff;
-    transition: all .1s ease-in-out;
-  }
-    
+  } */
 }
