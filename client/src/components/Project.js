@@ -2,10 +2,10 @@ import React from 'react'
 
 export default function Project({name, img, bio, link}) {
   return (
-    <div className='project-card'>
-        <h4><a href={link}>{name}</a></h4>
-        <img src={img} alt=""/>
-        <p>{bio}</p>
-    </div>
+    <a href={link} className='project-card' target={"_blank"} rel="noreferrer">
+      <img src={img} alt=""/>
+      <h4>{name}</h4>
+      <p>{bio}</p>
+    </a>
   )
 }
