@@ -13,7 +13,10 @@ export default function Projects(props) {
   })
   return (
     <div className='projects-page'>
-      {renderProjects}
+      <h2>Projects</h2>
+      <div className='projects-container'>
+        {renderProjects}
+      </div>
     </div>
   )
 }
