@@ -17,7 +17,32 @@
   width: 100vw;
 }
 
+.main{
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
+.main > *{
+  width: 85vw;
+}
+
+.home-page > .intro {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.home-page > .intro > h2 {
+  margin: 0;
+  font-size: 2rem;
+  color: #849ffe;
+}
+
+.home-page > .intro >img {
+  align-self: center;
+}
 /* For components/Header */
 
 .h-nav{
@@ -53,52 +78,9 @@
 /*Home Page Styling */
 
 
-.intro-image > img{
-  display: none;
-  width: 30vw;
-}
 
-.section-1-text > p > a {
-  color: var(--yellow);
-}
 
-.social-icons {
-  display: flex;
-  justify-content: space-between;
-}
-.social-icons > a >img {
-  width: 20vw;
-}
-@media (min-width:1281px){
-
-  .section-1 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .intro-image{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .intro-image > img{
-    display: block;
-    width: 20vw;
-  }
-  .stack-icons{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .section-2{
-    width: 80vw;;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-}
-
+//////////////////
 
 /* FOR PROJECTS */
 /* .projects-page{
@@ -190,21 +172,7 @@ height: auto;
 
 
 
-/* For Footer */
-footer {
-  position:relative;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
 
-/*Attempt new nav bar*/
-
-/*Attempt using media queries*/
 
   /*For BlogEntry */
 
@@ -258,4 +226,25 @@ footer {
     
 
   } */
+}
+
+
+/* For Footer */
+footer {
+  position:relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: space-between;
+}
+.social-icons > a >img {
+  width: 20vw;
 }
