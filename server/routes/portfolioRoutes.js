@@ -1,8 +1,8 @@
 const express = require("express")
-const Contact = require('../models/contact')
-const {createContact} = require('../controllers/portfolioControllers')
+const {getProjects, createProject} = require('../controllers/portfolioControllers')
 const router = express.Router();
 
-router.post("/contact", createContact)
+router.get("/api/projects", getProjects)
+router.post("/api/projects", createProject)
 
 module.exports = router
