@@ -20,10 +20,8 @@ function App() {
     axios.get(`${env.API_URL}/api/blogs`) //Modify to Render API
       .then(res => {
         setBlogData(res.data)
-        console.log(setBlogData)
-        
       })
-  }, [blogData])
+  }, [])
 
   return (
     <div className="App">
@@ -35,7 +33,7 @@ function App() {
 
         {blogData.map(blog => {
           return (<Route key={nanoid()} path={`/blog/${blog.title}`} exact element={
-            <PageContainer children={<BlogEntry title={blog.title} content={blog.content} imgArr={blog.images}/>}/> 
+            <PageContainer children={<BlogEntry title={blog.title} content={blog.content[0]} imgArr={blog.images}/>}/> 
           } />) 
         } )}
       </Routes>

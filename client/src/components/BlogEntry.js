@@ -1,9 +1,11 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 
-export default function BlogEntry({title, content }) {
+export default function BlogEntry({title, content}) {
 
-  const renderContent = content.map( type => {
+  let data = content.split('","')
+
+  const renderContent = data.map( type => {
     if( type.includes('http') ){
       return <img src={type} alt=""/>
     } else {
