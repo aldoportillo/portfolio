@@ -1,4 +1,5 @@
 const Project = require("../models/projectModel")
+const Blog = require("../models/blogModel")
 const asyncHandler = require('express-async-handler')
 
 const getProjects = asyncHandler(async (req, res) => {
@@ -26,7 +27,30 @@ const createProject = async(req,res) => {
     res.status(201).json(project)
 }
 
+const getBlogs = asyncHandler(async(req, res) => {
+    const blogs = await Blog.find({})
+    res.status(200).json(blogs)
+})
+
+const createBlog = async(req,res) => {
+    const {title, date, content} = req.body
+
+    if(!title || !date  || !content){
+        res.status(400)
+        throw new Error("Please fill in all fields")
+    }
+
+    const blog = await Blog.create({
+        title,
+        date,
+        content
+    })
+    res.status(201).json(blog)
+}
+
 module.exports = {
     getProjects,
-    createProject
+    createProject,
+    getBlogs,
+    createBlog
 }
