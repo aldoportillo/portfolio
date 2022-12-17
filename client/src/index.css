@@ -30,8 +30,12 @@
 
 /* For Header */
 
+header{
+  width: 98vw;
+  align-self: center;
+}
+
 .h-nav{
-  width: 100vw;
   display: flex;
   justify-content: space-between;
   
