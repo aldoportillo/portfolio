@@ -31,7 +31,9 @@ function App() {
         <Route path="/contact" element={<PageContainer children={<Contact />} />} />
 
         {blogData.map(blog => {
-          return (<Route key={nanoid()} path={`/blog/${blog.title}`} exact element={<BlogEntry title={blog.title} content={blog.content} imgArr={blog.images}/> } />) //This will create the Blog entry pages
+          return (<Route key={nanoid()} path={`/blog/${blog.title}`} exact element={
+            <PageContainer children={<BlogEntry title={blog.title} content={blog.content} imgArr={blog.images}/>}/> 
+          } />) 
         } )}
       </Routes>
     </div>
