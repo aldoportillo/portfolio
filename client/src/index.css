@@ -367,17 +367,27 @@ footer {
   position:relative;
   left: 0;
   bottom: 0;
-  width: 100%;
+  width: 98vw;
   color: white;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
+  align-self: center;
 }
 
 .social-icons {
   display: flex;
-  justify-content: space-between;
 }
-.social-icons > a >img {
-  width: 20vw;
+
+footer > .first-row{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer > .second-row{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
