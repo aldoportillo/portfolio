@@ -232,6 +232,7 @@
 .project-card > p{
   background-color: #849ffe;
   color: #282836;
+  width: 70vw;
 }
 
 @media (min-width:1025px){
@@ -245,6 +246,9 @@
 
   .project-card > img{
     width: 18vw;
+  }
+  .project-card > p{
+    width: 19vw;
   }
 }
 /* For Blog Page */
@@ -305,34 +309,15 @@ height: auto;
 
 
 
-
-
-  /*For BlogEntry */
-
-
-
 /* For Contact page */
 
-.contact-page > *{
-  background-color: #2d2d35;
-
-}
-
-.contact-page > form{
-  display: flex;
-  flex-direction: column;
-}
-@media (min-width:1025px){
-  /* .contact-page {
+  .contact-page {
     display: flex;
-    justify-content: center;
     flex-direction: column;
     align-items: center;
     border: 1px solid white;
-    margin: 30px;
-    margin-left: 30vw;
-    margin-right: 30vw;
     background-color: #2d2d35;
+    max-width: 1025px;
   }
 
   .contact-page > form, 
@@ -358,8 +343,28 @@ height: auto;
     outline: none
     
 
-  } */
-}
+  }
+
+  .button {
+    position: relative;
+    display: block;
+    width: 200px;
+    height: 36px;
+    border-radius: 18px;
+    background-color: #1c89ff;
+    border: solid 1px transparent;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 300;
+    cursor: pointer;
+    transition: all .1s ease-in-out;
+    margin-bottom: 1.2em;
+  }
+  .button:hover {
+    background-color: transparent;
+    border-color: #fff;
+    transition: all .1s ease-in-out;
+  }
 
 
 /* For Footer */
@@ -391,3 +396,4 @@ footer > .second-row{
   justify-content: space-between;
   align-items: center;
 }
+
