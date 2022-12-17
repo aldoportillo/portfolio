@@ -5,23 +5,26 @@ import Home from './pages/Home';
 import Projects from './pages/Projects';
 import Blog from './pages/Blog';
 import Contact from './pages/Contact';
-
-import { blogDataAPI } from './data/blogData';
 import BlogEntry from './components/BlogEntry';
 import { nanoid } from 'nanoid';
 import PageContainer from './components/PageContainer';
+import axios from 'axios';
+import env from 'react-dotenv';
 
 function App() {
 
+  const [blogData, setBlogData] = React.useState([])
 
-  const [blogData, setBlogData] = React.useState(blogDataAPI) //This will soon be from the API and just called blogData
 
-    // React.useEffect(()=> {
-    //     fetch('/blogs')
-    //     .then(res => res.json())
-    //     .then(data => setBlogData(data)) 
-   
-    // }, [])
+  React.useEffect(() => {
+    axios.get(`${env.API_URL}/api/blogs`) //Modify to Render API
+      .then(res => {
+        setBlogData(res.data)
+        console.log(setBlogData)
+        
+      })
+  }, [blogData])
+
   return (
     <div className="App">
       <Routes>
