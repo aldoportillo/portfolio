@@ -1,5 +1,7 @@
 const mongoose = require("mongoose")
 
+
+
 const blogSchema = mongoose.Schema({
     title: {
         type: String,
@@ -10,8 +12,8 @@ const blogSchema = mongoose.Schema({
         required: [true, "Please add a date"],
     },
     content: {
-        type: Array,
-        required: [true, "Please add content"]
+        type: [String],
+        required: [true, "Please add content"],
     },
 })
 

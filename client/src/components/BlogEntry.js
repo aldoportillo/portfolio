@@ -3,15 +3,14 @@ import {Link} from 'react-router-dom'
 
 export default function BlogEntry({title, content}) {
 
-  let data = content.split('","')
-
-  const renderContent = data.map( type => {
+  const renderContent = content.map( type => {
     if( type.includes('http') ){
       return <img src={type} alt=""/>
     } else {
       return <p>{type}</p>
     }
   })
+
   return (
     <div className='blog-entry'>
         <h3>{title}</h3>
