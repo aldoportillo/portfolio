@@ -9,15 +9,13 @@ export default function Projects(props) {
 
   const [projectData, setProjectData] = React.useState([])
 
-
   React.useEffect(() => {
     axios.get(`${env.API_URL}/api/projects`) //Modify to Render API
       .then(res => {
         setProjectData(res.data)
-        console.log(projectData)
         
       })
-  }, [projectData])
+  }, [])
 
   const renderProjects = projectData.map(project => {
     return (
