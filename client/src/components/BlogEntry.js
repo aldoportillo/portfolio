@@ -1,8 +1,13 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import {Link, useLocation} from 'react-router-dom'
 import {nanoid} from 'nanoid'
 
-export default function BlogEntry({title, content}) {
+export default function BlogEntry() {
+
+  const location = useLocation()
+  const {data} = location.state
+
+  const {title, content} = data
 
   const renderContent = content.map( type => {
     if( type.includes('http') ){
