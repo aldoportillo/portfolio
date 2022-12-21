@@ -14,14 +14,7 @@ export default function Blog({blogData}) {
   return (
     <div className='blog-page'>
     <h2>Blogs</h2>
-
-    {renderBlogs}
-     {/* {(typeof blogData.randomArr === 'undefined') ? (
-        <p>Loading...</p>
-    ): (
-        // <p>{blogData.randomArr}</p>
-        {renderBlogs}
-    )}  */}
+      {renderBlogs}
     </div>
   )
 }
