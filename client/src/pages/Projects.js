@@ -10,7 +10,7 @@ export default function Projects(props) {
   const [projectData, setProjectData] = React.useState([])
 
   React.useEffect(() => {
-    axios.get(`${env.API_URL}/api/projects`) //Modify to Render API
+    axios.get(`https://aldoportillo-portfolio.onrender.com/api/projects`) //Modify to Render API
       .then(res => {
         setProjectData(res.data)
         
