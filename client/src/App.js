@@ -17,7 +17,7 @@ function App() {
 
 
   React.useEffect(() => {
-    axios.get(`${env.API_URL}/api/blogs`) //Modify to Render API
+    axios.get(`https://aldoportillo-portfolio.onrender.com/api/blogs`) //Modify to Render API
       .then(res => {
         setBlogData(res.data)
       })
