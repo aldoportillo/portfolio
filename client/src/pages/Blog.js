@@ -7,7 +7,7 @@ export default function Blog({blogData}) {
 
     const renderBlogs = blogData.map( blog => {
         return(
-        <Link to={`/blog/${blog._id}`}>
+        <Link to={`/blog/${blog._id}`} state={{ from: "blog", data: blog}}>
             <h3>{blog.title}</h3>
             <p>{blog.date}</p>
         </Link>
