@@ -1,6 +1,5 @@
 import React from 'react'
-import BlogList from '../components/BlogList'
-import { nanoid } from 'nanoid'
+import { Link } from 'react-router-dom'
 
 
 export default function Blog({blogData}) {
@@ -8,13 +7,18 @@ export default function Blog({blogData}) {
 
     const renderBlogs = blogData.map( blog => {
         return(
-            <BlogList key={nanoid()} title={blog.title} date={blog.date} />
+        <Link to={`/blog/${blog._id}`}>
+            <h3>{blog.title}</h3>
+            <p>{blog.date}</p>
+        </Link>
         )
     })
   return (
     <div className='blog-page'>
     <h2>Blogs</h2>
-      {renderBlogs}
+      <div className='blog-list'>
+        {renderBlogs}
+      </div> 
     </div>
   )
 }
