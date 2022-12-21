@@ -1,13 +1,14 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import {nanoid} from 'nanoid'
 
 export default function BlogEntry({title, content}) {
 
   const renderContent = content.map( type => {
     if( type.includes('http') ){
-      return <img src={type} alt=""/>
+      return <img key={nanoid()} src={type} alt=""/>
     } else {
-      return <p>{type}</p>
+      return <p key={nanoid()}>{type}</p>
     }
   })
 
