@@ -3,19 +3,8 @@ import Project from '../components/Project'
 import axios from 'axios'
 import env from 'react-dotenv'
 
-export default function Projects(props) {
+export default function Projects({projectData}) {
 
-  //I will map through projects data to return Project component cards
-
-  const [projectData, setProjectData] = React.useState([])
-
-  React.useEffect(() => {
-    axios.get(`https://aldoportillo-portfolio.onrender.com/api/projects`) //Modify to Render API
-      .then(res => {
-        setProjectData(res.data)
-        
-      })
-  }, [])
 
   const renderProjects = projectData.map(project => {
     return (
