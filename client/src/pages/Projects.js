@@ -1,7 +1,5 @@
 import React from 'react'
-import Project from '../components/Project'
-import axios from 'axios'
-import env from 'react-dotenv'
+import Project from '../components/Project' 
 
 export default function Projects({projectData}) {
 
