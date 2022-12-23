@@ -51,10 +51,10 @@ const createBlog = async(req,res) => {
 }
 
 const contactEmail = nodemailer.createTransport({
-    service: 'gmail',
+    service: 'hotmail',
     auth: {
-      user: `${process.env.SENDER_EMAIL}`,
-      pass: `${process.env.SENDER_PASSWORD}`,
+      user: process.env.SENDER_EMAIL,
+      pass: process.env.SENDER_PASSWORD,
     },
   });
   
@@ -66,11 +66,11 @@ const contactEmail = nodemailer.createTransport({
     }
   });
 
-const sendEmail = asyncHandler(async (req, res) => {
+const sendEmail =  (req, res) => {
     const {name, email, message} = req.body;
     const mail = {
       from: name,
-      to: `${process.env.RECIEVER_EMAIL}`,
+      to: process.env.RECIEVER_EMAIL,
       subject: "Contact Form Submission",
       html: `<p>Name: ${name}</p>
              <p>Email: ${email}</p>
@@ -83,7 +83,7 @@ const sendEmail = asyncHandler(async (req, res) => {
         res.json({ status: "Message Sent" });
       }
     });
-  })
+  }
 
 module.exports = {
     getProjects,
