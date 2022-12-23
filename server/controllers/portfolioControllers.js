@@ -48,9 +48,29 @@ const createBlog = async(req,res) => {
     res.status(201).json(blog)
 }
 
+const sendEmail = asyncHandler(async (req, res) => {
+    const {name, email, message} = req.body;
+    const mail = {
+      from: name,
+      to: `${process.env.EMAIL}`,
+      subject: "Contact Form Submission",
+      html: `<p>Name: ${name}</p>
+             <p>Email: ${email}</p>
+             <p>Message: ${message}</p>`,
+    };
+    contactEmail.sendMail(mail, (error) => {
+      if (error) {
+        res.json({ status: "ERROR" });
+      } else {
+        res.json({ status: "Message Sent" });
+      }
+    });
+  })
+
 module.exports = {
     getProjects,
     createProject,
     getBlogs,
-    createBlog
+    createBlog,
+    sendEmail
 }
