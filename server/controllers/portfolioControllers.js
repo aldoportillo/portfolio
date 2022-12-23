@@ -1,6 +1,8 @@
 const Project = require("../models/projectModel")
 const Blog = require("../models/blogModel")
 const asyncHandler = require('express-async-handler')
+const dotenv = require("dotenv").config()
+const nodemailer = require("nodemailer");
 
 const getProjects = asyncHandler(async (req, res) => {
     const projects = await Project.find({})
@@ -48,11 +50,27 @@ const createBlog = async(req,res) => {
     res.status(201).json(blog)
 }
 
+const contactEmail = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: `${process.env.SENDER_EMAIL}`,
+      pass: `${process.env.SENDER_PASSWORD}`,
+    },
+  });
+  
+  contactEmail.verify((error) => {
+    if (error) {
+      console.log(error);
+    } else {
+      console.log("Ready to Send");
+    }
+  });
+
 const sendEmail = asyncHandler(async (req, res) => {
     const {name, email, message} = req.body;
     const mail = {
       from: name,
-      to: `${process.env.EMAIL}`,
+      to: `${process.env.RECIEVER_EMAIL}`,
       subject: "Contact Form Submission",
       html: `<p>Name: ${name}</p>
              <p>Email: ${email}</p>
