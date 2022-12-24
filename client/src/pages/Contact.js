@@ -20,7 +20,7 @@ export default function Contact() {
         setStatus("Sending...");
 
         try {
-            await axios.post(`http://localhost:5000/api/contact`, data)
+            await axios.post(`https://aldoportillo-portfolio.onrender.com/api/contact`, data)
             alert("sent")
             setName("")
             setEmail("")
