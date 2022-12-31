@@ -13,6 +13,7 @@ function App() {
 
   const [blogData, setBlogData] = React.useState([])
   const [projectData, setProjectData] = React.useState([])
+  const [isLoading, setIsLoading] = React.useState(false)
 
 
   React.useEffect(() => {
