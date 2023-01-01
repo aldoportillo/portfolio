@@ -13,16 +13,19 @@ function App() {
 
   const [blogData, setBlogData] = React.useState([])
   const [projectData, setProjectData] = React.useState([])
-  const [isLoading, setIsLoading] = React.useState(false)
+  const [areBlogsLoading, setAreBlogsLoading] = React.useState(true)
+  const [areProjectsLoading, setAreProjectsLoading] = React.useState(true)
 
 
   React.useEffect(() => {
     axios.get(`https://aldoportillo-portfolio.onrender.com/api/blogs`) //Modify to Render API
       .then(res => {
+        setAreBlogsLoading(false)
         setBlogData(res.data)
       })
       axios.get(`https://aldoportillo-portfolio.onrender.com/api/projects`) //Modify to Render API
       .then(res => {
+        setAreProjectsLoading(false)
         setProjectData(res.data)
         
       })
@@ -34,8 +37,8 @@ function App() {
     <div className="App">
       <Routes>
         <Route exact path="/" element={<PageContainer children={<Home />}/>} />
-        <Route path="/projects" element={<PageContainer children={<Projects projectData={projectData}/>} />} />
-        <Route path="/blog/" element={<PageContainer children={<Blog blogData={blogData}/>} />}/>
+        <Route path="/projects" element={<PageContainer children={<Projects isLoading={areProjectsLoading} projectData={projectData}/>} />} />
+        <Route path="/blog/" element={<PageContainer children={<Blog isLoading={areBlogsLoading} blogData={blogData}/>} />}/>
         <Route path="/blog/:id" element={<PageContainer children={<BlogEntry />} />} />
         <Route path="/contact" element={<PageContainer children={<Contact />} />} />
       </Routes>
