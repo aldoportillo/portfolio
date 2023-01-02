@@ -1,8 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Loader from '../components/Loader'
 
 
-export default function Blog({blogData}) {
+export default function Blog({blogData, isLoading}) {
 
 
     const renderBlogs = blogData.map( blog => {
@@ -16,11 +17,16 @@ export default function Blog({blogData}) {
         )
     })
   return (
+    //Conditional
     <div className='blog-page'>
-    <h2>Blogs</h2>
-      
+      {
+      isLoading ? 
+      <Loader /> :
+      <>
+        <h2>Blogs</h2>
         {renderBlogs}
-      
+      </>
+      }
     </div>
   )
 }
