@@ -8,7 +8,7 @@ export default function Blog({blogData, isLoading}) {
 
     const renderBlogs = blogData.map( blog => {
         return(
-          <div className='blog-list'>
+          <div className='blog-list' key={blog._id}>
         <Link to={`/blog/${blog._id}`} state={{ from: "blog", data: blog}}>
             <h3>{blog.title}</h3>
             <p>{blog.date}</p>
@@ -17,7 +17,6 @@ export default function Blog({blogData, isLoading}) {
         )
     })
   return (
-    //Conditional
     <div className='blog-page'>
       {
       isLoading ? 
