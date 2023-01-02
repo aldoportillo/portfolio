@@ -35,11 +35,11 @@ export default function Contact() {
     <div className='contact-page'>
         <h3>Contact Me!</h3>
         <form onSubmit={sendEmail}>
-            <label for="name">Name: </label>
+            <label htmlFor="name">Name: </label>
             <input type="text" id="name" name="name" onChange={(e) => {setName(e.target.value)}} required></input>
-            <label for="email">E-mail: </label>
+            <label htmlFor="email">E-mail: </label>
             <input type="email" id="email" name="email" onChange={(e) => {setEmail(e.target.value)}} required></input>
-            <label for="message">Message: </label>
+            <label htmlFor="message">Message: </label>
             <input type="text" id="message" name="message" onChange={(e) => {setMessage(e.target.value)}}required></input>
             <button className='button'>{status}</button>
         </form>
