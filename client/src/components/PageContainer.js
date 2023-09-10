@@ -2,6 +2,7 @@ import React from 'react'
 import Footer from './Footer'
 import Header from './Header'
 import { useLocation } from 'react-router-dom'
+import SlidingNav from './SlidingNav'
 
 
 
@@ -37,9 +38,10 @@ export default function PageContainer({children}) {
   return (
     <div className="container">
         <Header isOpen={isOpen} setIsOpen={setIsOpen} windowSize={windowSize}/>
-        <div className='main'>
+        <main>
           {children}
-        </div>
+          <SlidingNav />
+        </main>
         <Footer />
     </div>
   )
