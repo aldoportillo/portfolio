@@ -4,43 +4,51 @@ import Header from './Header'
 import { useLocation } from 'react-router-dom'
 import SlidingNav from './SlidingNav'
 
-
-
+const getWindowSize = () => {
+  const {innerWidth} = window;
+  return innerWidth
+}
 
 export default function PageContainer({children}) {
 
-  const getWindowSize = () => {
-    const {innerWidth} = window;
-    return innerWidth
-}
+const location  = useLocation()
 
-  const [isOpen, setIsOpen] = React.useState(false)
+const [openNav, setOpenNav] = React.useState(false)
+const [navWidth, setNavWidth] = React.useState(0)
 
-  const [windowSize, setWindowSize] = React.useState(getWindowSize())
+const [windowSize, setWindowSize] = React.useState(getWindowSize())
 
-  const location  = useLocation()
+React.useEffect(() => {
+  function handleResize() {
+    setWindowSize(getWindowSize())
+  }
 
-  React.useEffect(() => {
-    function handleResize() {
-      setWindowSize(getWindowSize())
-    }
+  window.addEventListener('resize', handleResize)
 
-    window.addEventListener('resize', handleResize)
+  return () => {
+    window.removeEventListener('resize', handleResize)
+  }
+}, [])
 
-    return () => {
-      window.removeEventListener('resize', handleResize)
-    }
-  }, [])
+React.useEffect(() => {
+  if (openNav){
+    setNavWidth(60)
+  } else {
+    setNavWidth(0)
+  }
+}, [openNav])
 
-  React.useEffect(()  => {
-    setIsOpen(false)
-  }, [location])
+React.useEffect(() => {
+  setNavWidth(0)
+  setOpenNav(false)
+},[location])
+
   return (
     <div className="container">
-        <Header isOpen={isOpen} setIsOpen={setIsOpen} windowSize={windowSize}/>
+        <Header openNav={openNav} setOpenNav={setOpenNav} windowSize={windowSize}/>
         <main>
           {children}
-          <SlidingNav />
+          <SlidingNav navWidth={navWidth} />
         </main>
         <Footer />
     </div>
