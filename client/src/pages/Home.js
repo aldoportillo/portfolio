@@ -12,8 +12,9 @@ export default function Home() {
       </div>
       <div className='about-me'>
         <h2>About Me</h2>
-        <p>I come from a chemistry background with the intention to attend medical school. Even though I loved chemistry and was fascinated with the idea of becoming a surgeon, I've always had this itch on the back of my head that was telling me becoming a Software Engineer is what I actually wanted.</p>
-        <p>Aside from coding, I enjoy bartending and training in MMA. Check out my sparring footage.</p>
+        <p>Greetings, I'm Aldo Portillo, and I'm thrilled to welcome you into my world, a dynamic blend of diverse passions and unyielding dedication. With a unique background in Chemistry, Coding, and Bartending, I've cultivated a multifaceted skill set that shapes my perspective and fuels my endeavors. Beyond my professional interests, you'll find me immersed in the world of MMA, where discipline, challenge, and growth converge.</p>
+        <p>Currently, I'm channeling my creativity into "Neat on the Rocks," an all-in-one web app that seamlessly merges the realms of science and mixology, catering to cocktail enthusiasts and science aficionados alike. In the realm of scholarship, I've been honored with grants to study Russian, a language that unlocks new cultures and perspectives. Additionally, I've proudly earned medals at Brazilian Jiu-Jitsu tournaments, a testament to my unwavering dedication and discipline.</p>
+        <p>At the core of my life are values of honor, respect, and an unwavering commitment to personal growth, not just for my own enrichment, but also to make a positive impact on society and the people close to my heart. As I continue this journey, I remain open to new adventures and challenges that life may offer. Thank you for being a part of this voyage, and I look forward to connecting with you as we explore the world of science, mixology, martial arts, and personal growth together.</p>
       </div>
       <div className='stack'>
         <h2>Technologies</h2> 
