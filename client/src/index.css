@@ -35,6 +35,10 @@ main > div {
   }
 }
 
+h1 {
+  font-size: 2rem;
+}
+
 
 
 
@@ -50,38 +54,19 @@ main > div {
 /* For Header */
 
 header{
-  width: 100vw;
-  align-self: center;
   background-color: var(--overlay);
-}
-
-.h-nav{
   display: flex;
   justify-content: space-between;
-  
+  align-items: center;
+  padding: 2vw 5vw 2vw 5vw;
 }
 
-.h-nav > .side-bar > nav{
+
+header > .nav-bar{
   display: flex;
   gap: 1rem;
 }
 
-.v-nav > .side-bar > nav{
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
-
-.v-nav > .side-bar > nav > a  {
-  text-decoration: underline;
-  border: 0.1px solid rgba(255, 255, 255, 0.259);
-  background-color: #2d2d35;
-  border-radius: 5px;
-}
-
-.side-bar > nav > a > h5 {
-  background-color: #2d2d35;
-}
 
 .home-page > .intro >img {
   grid-column: 4/5;
