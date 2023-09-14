@@ -2,10 +2,15 @@
 
 * {
   --yellow: #FFFF00;
-  background-color: #282836;
+  --overlay: #424254;
+  --background: #282836;
   color: white;
   text-decoration: none;
   font-family: 'Source Code Pro', monospace;
+}
+
+body{
+  background-color: var(--background);
 }
 
 /*For Page Layout*/
@@ -424,7 +429,7 @@ footer > .second-row{
 
 
 .sliding-nav{
-  background-color: var(--header);
+  background-color: var(--overlay);
   display: flex;
   flex-direction: column;
   align-items: flex-end;
