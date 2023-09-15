@@ -4,10 +4,12 @@ export default function Home() {
   return (
     <div className='home-page'>
       <div className='intro'>
+        <div>
         <h3>Hello world, I'm</h3>
         <h2>Aldo Portillo</h2>
         <h3>Software Engineer</h3>
         <p>I maintain an ever-curious mindset, constantly seeking the most optimal solutions to every challenge. My innate inquisitiveness, coupled with an analytical approach, drives my problem-solving abilities.</p>
+        </div>
         <img src={require('../media/roofTopClear.PNG')} alt="its me" />
       </div>
       <div className='about-me'>
@@ -39,7 +41,6 @@ export default function Home() {
         <p>Thanks to my background in chemistry, I discovered a fascinating synergy with bartending. Both disciplines share striking similarities; they involve gathering diverse elements to craft something new. In therms of bartending, something truly enjoyable.</p>
         <p>My insatiable analytical curiosity goes beyond merely mixing a cocktail. I crave a deeper understanding. How does dilution transform the flavor of a cocktail? What macronutrients contribute to its composition? And, let's not forget the metabolic pathway of alcohol in the body.</p>
         <p>In response to these burning questions, I birthed <a href="https://www.neatonthe.rocks/" target={"_blank"} rel="noreferrer">Neat on the Rocks</a> It's a passionate endeavor, a cocktail of chemistry and mixology knowledge. I'm thrilled to announce the launch of our <a href="https://www.neatonthe.rocks/macro" target={"_blank"} rel="noreferrer">macronutrient calculator</a>, and the excitement doesn't stop there. Our latest updates include a <a href="https://www.neatonthe.rocks/dilution" target={"_blank"} rel="noreferrer">dilution calculator</a> and a <a href="https://www.neatonthe.rocks/myBAC" target={"_blank"} rel="noreferrer">BAC (Blood Alcohol Content) tracker</a>. Stay tuned for further updates as we continue to stir up new experiences.</p>
-        <p>I created  to help answer these questions. There are further updates soon to come, but I am glad to have the  live.</p>
       </div>
     </div> 
   )
