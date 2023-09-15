@@ -9,6 +9,7 @@ import BlogEntry from './components/BlogEntry';
 import PageContainer from './components/PageContainer';
 import axios from 'axios';
 import NewBlogs from './pages/NewBlogs';
+import NewBlog from './pages/NewBlog';
 
 function App() {
 
@@ -52,6 +53,7 @@ function App() {
         <Route path="/blog1/:id" element={<PageContainer children={<BlogEntry />} />} />
         <Route path="/contact" element={<PageContainer children={<Contact />} />} />
         <Route path="/blog" element={<PageContainer children={<NewBlogs devData={devData} />} />} />
+        <Route path="/blog/:id" element={<PageContainer children={<NewBlog />} />} />
       </Routes>
     </div>
   );
