@@ -137,6 +137,16 @@ header > .nav-bar{
   }
 }
 
+/*Blog Page*/
+
+.blog-name{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80vw;  /* I dont like this */
+  
+}
+
 
 
 
