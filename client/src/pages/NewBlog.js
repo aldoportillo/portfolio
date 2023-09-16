@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React from 'react'
 import { useLocation } from 'react-router-dom'
+import ReactMarkdown from 'react-markdown'
 
 export default function NewBlog() {
     const location = useLocation()
@@ -15,12 +16,10 @@ export default function NewBlog() {
         })
     }, [])
 
-
-    console.log(typeof content.body_html)
-
   return (
     <div className='blog'>
-        {content.body_html}
+      <h1>{content.title}</h1>
+      <ReactMarkdown children={content.body_markdown} />
     </div>
   )
 }
