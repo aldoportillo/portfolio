@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React from 'react'
+import ContactForm from '../components/ContactForm'
 
 export default function Contact() {
 
@@ -33,16 +34,10 @@ export default function Contact() {
 
   return (
     <div className='contact-page'>
-        <h3>Contact Me!</h3>
-        <form onSubmit={sendEmail}>
-            <label htmlFor="name">Name: </label>
-            <input type="text" id="name" name="name" onChange={(e) => {setName(e.target.value)}} required></input>
-            <label htmlFor="email">E-mail: </label>
-            <input type="email" id="email" name="email" onChange={(e) => {setEmail(e.target.value)}} required></input>
-            <label htmlFor="message">Message: </label>
-            <input type="text" id="message" name="message" onChange={(e) => {setMessage(e.target.value)}}required></input>
-            <button className='button'>{status}</button>
-        </form>
+        <div className='contact-form'>
+            <h3>Contact Me!</h3>
+            <ContactForm status={status} sendEmail={sendEmail} setName={setName} setEmail={setEmail} setMessage={setMessage} />
+        </div>
     </div>
   )
 }
