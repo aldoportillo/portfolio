@@ -38,7 +38,7 @@ export default function Home() {
         </div>
       <div className='bartending'>
         <h2>Bartending</h2>
-        <p>Thanks to my background in chemistry, I discovered a fascinating synergy with bartending. Both disciplines share striking similarities; they involve gathering diverse elements to craft something new. In therms of bartending, something truly enjoyable.</p>
+        <p>Thanks to my background in chemistry, I discovered a fascinating synergy with bartending. Both disciplines share striking similarities; they involve gathering diverse elements to craft something new. In terms of bartending, something truly enjoyable.</p>
         <p>My insatiable analytical curiosity goes beyond merely mixing a cocktail. I crave a deeper understanding. How does dilution transform the flavor of a cocktail? What macronutrients contribute to its composition? And, let's not forget the metabolic pathway of alcohol in the body.</p>
         <p>In response to these burning questions, I birthed <a href="https://www.neatonthe.rocks/" target={"_blank"} rel="noreferrer">Neat on the Rocks</a> It's a passionate endeavor, a cocktail of chemistry and mixology knowledge. I'm thrilled to announce the launch of our <a href="https://www.neatonthe.rocks/macro" target={"_blank"} rel="noreferrer">macronutrient calculator</a>, and the excitement doesn't stop there. Our latest updates include a <a href="https://www.neatonthe.rocks/dilution" target={"_blank"} rel="noreferrer">dilution calculator</a> and a <a href="https://www.neatonthe.rocks/myBAC" target={"_blank"} rel="noreferrer">BAC (Blood Alcohol Content) tracker</a>. Stay tuned for further updates as we continue to stir up new experiences.</p>
       </div>
