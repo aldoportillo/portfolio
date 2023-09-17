@@ -114,6 +114,11 @@ main > div {
   main > div {
     margin: 0 10vw 0 10vw
   }
+
+  .contact-page{
+    padding: 0 10vw 0 10vw;
+  }
+
 }
 
 h1 {
@@ -249,7 +254,6 @@ header > .nav-bar{
   .button {
     position: relative;
     display: block;
-    width: 200px;
     height: 36px;
     border-radius: 18px;
     background-color: #1c89ff;
@@ -352,3 +356,49 @@ footer > .second-row{
 .hamburger{z-index: 2;}
 
 
+/*For Contact Page*/
+
+.contact-form{
+  background-color: var(--overlay);
+  padding: 2vw 5vw 2vw 5vw;
+  border-radius: 2vw;
+  border: 1px solid white;
+}
+.contact-form > form{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.contact-form > form > button{
+  width: auto;
+}
+
+form > input[type=text], form > input[type=email] {
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  color: black;
+  height: 25px;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+     -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+     -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+      -ms-transition: border linear 0.2s, box-shadow linear 0.2s;
+       -o-transition: border linear 0.2s, box-shadow linear 0.2s;
+          transition: border linear 0.2s, box-shadow linear 0.2s;
+}
+
+form > input[type=text]:focus {
+  border-color: rgba(82, 168, 236, 0.8);
+  outline: 0;
+  outline: thin dotted \9;
+  /* IE6-9 */
+
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+     -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+}
