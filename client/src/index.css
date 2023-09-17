@@ -147,7 +147,10 @@ header > .nav-bar{
   
 }
 
-
+.blog{
+  width: 80vw;
+  height: auto;
+}
 
 
   .button {
