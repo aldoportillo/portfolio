@@ -52,7 +52,7 @@ function App() {
         <Route path="/blog1/" element={<PageContainer children={<Blog isLoading={areBlogsLoading} blogData={blogData}/>} />}/>
         <Route path="/blog1/:id" element={<PageContainer children={<BlogEntry />} />} />
         <Route path="/contact" element={<PageContainer children={<Contact />} />} />
-        <Route path="/blog" element={<PageContainer children={<NewBlogs devData={devData} />} />} />
+        <Route path="/blog" element={<PageContainer children={<NewBlogs isDevLoading= {isDevLoading} devData={devData} />} />} />
         <Route path="/blog/:id" element={<PageContainer children={<NewBlog />} />} />
       </Routes>
     </div>
